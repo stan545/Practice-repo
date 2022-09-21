@@ -63,13 +63,4 @@ int main(void)
 		{
 			printf("You have given an invalid year, please restart the app and enter a valid one\n");
 		}
-
-/*	else(YOB = current_year)
-	{
-		if(MOB = current_month)
-		{
-			printf("You are not up to a month old🚼");
-		}
-	}
- */
 }
