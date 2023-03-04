@@ -12,7 +12,7 @@ int main(void)
 	char *p;
 
 	p = &c;
-	c = 'H';
+	c = 'S';
 	printf("the address of p is: %p\n", &p);
 	printf("The address of c is: %p\n", &c);
 	printf("The value of *p is: %p\n", p);

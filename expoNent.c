@@ -7,7 +7,7 @@ int _pow(int,int);
 int main(int argc,char *argv[])
 {
 	printf("%d\n", abs(-100));
-	printf("%f\n", pow(9,5));
+	printf("%f\n", pow(9,2));
 }
 
 int abs(int num)
