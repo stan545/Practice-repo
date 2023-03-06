@@ -4,6 +4,7 @@
 
 int main(void)
 {
+
 	int current_year;
 	int current_month;
 	int _age;
@@ -14,8 +15,10 @@ int main(void)
 	int tm_year;
 
 	
-	printf("please enter your Year of birth: ");
+
+	printf("please enter your Year of birth not great than current year: ");
 	scanf("%d", &YOB);
+	
 	time_t t;
 	t = time('\0');
 	struct tm tm = *localtime(&t);
@@ -23,7 +26,6 @@ int main(void)
 	printf("current year is %i %i\n", tm.tm_mon+1, tm.tm_year+1900);
 	current_year = tm.tm_year+1900;
 	current_month = tm.tm_mon+1;
-	
 	if(YOB <= current_year)
 	{
 			printf("please enter your month of birth in figures: ");
