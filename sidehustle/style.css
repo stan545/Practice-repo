@@ -1,0 +1,14 @@
+body{
+    color: saddlebrown;
+    background-color: grey;
+    background-image: image(dbos.jpg);
+}
+h1{
+    color: blanchedalmond;
+}
+.header{
+    color: rgb(58, 23, 0);
+}
+.foot{
+    color: red;
+}
