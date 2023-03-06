@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidehustle task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Week 1 task from Sidehustle</h1>
+    <section></section>
+    <form id="Biodata">
+        <fieldset>
+            <legend>A simple form</legend>
+            <label for="fullname">Fullname:</label>
+            <br>
+            <input type="text" name="Fullname" id="fullname" required>
+            <br>
+            <label for="email">Email address: </label>
+            <br>
+            <input type="email" name="email" id="email" required><span id="emailError" class="error"></span><br>
+            <label for="Phonenumber">Phonenumber:</label>
+            <br>
+            <input type="tel" name="Phonenumber" id="Phonenumber" required><span id="telError" class="err"></span><br>
+            <br>
+            <label for="password">Password: </label>
+            <br>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <input type="radio" name="gender" id="male" value="male" required>
+            <label for="male">Male</label><br>
+            <br>
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female">Female</label><br>
+            <br>
+            <input type="radio" name="gender" id="private" value="private" required>
+            <label for="private">Prefer Not To Say</label>
+            <br>
+            <br>
+            <input type="submit" id="submit" value="SUBMIT">
+        </fieldset>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        function ValidityForm(){
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (email.match(pattern)){
+                emailError.innerHTML = "";
+                return true;
+            } else {
+                emailError.innerHTML = "Invalid email format";
+                return false;
+            }
+        }
+
+        function submitForm(){
+            var form = document.getElementById("Biodata");
+            var message = document.getElementById("message");
+            form.reset();
+            
+            message.innerHTML = "Form submitted successfully!";
+        }
+
+        document.getElementById("submit").addEventListener("click", function(event)
+        {
+            event.preventDefault();
+            if (ValidityForm())
+            {
+                submitForm();
+            }
+        });
+
+        var images = ["res.jpg","apple3.jpg","apple4.jpg","apple5.jpg","apple6.jpg"];
+        var currentImage = 0;
+        function changeBackground(){
+            currentImage++;
+            if (currentImage > images.length -1) {
+                currentImage = 0;
+            }
+            document.body.style.backgroundImage = "url(" + images[currentImage] + ")";
+            setTimeout(changeBackground, 5200);
+        }
+        setTimeout(changeBackground, 5150);
+    </script>
+</script>
+</body>
+</html>
