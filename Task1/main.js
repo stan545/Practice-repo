@@ -16,7 +16,7 @@ function submitForm(){
     var form = document.getElementById("Biodata");
     var message = document.getElementById("message");
     form.reset();
-    
+
     message.innerHTML = "Form submitted successfully!";
 }
 
@@ -28,15 +28,3 @@ document.getElementById("submit").addEventListener("click", function(event)
         submitForm();
     }
 });
-
-var images = ["res.jpg","apple3.jpg","apple4.jpg","apple5.jpg","apple6.jpg"];
-var currentImage = 0;
-function changeBackground(){
-    currentImage++;
-    if (currentImage > images.length -1) {
-        currentImage = 0;
-    }
-    document.body.style.backgroundImage = "url(" + images[currentImage] + ")";
-    setTimeout(changeBackground, 5200);
-}
-setTimeout(changeBackground, 5150);

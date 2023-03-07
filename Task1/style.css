@@ -29,6 +29,5 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    transition: background-image 2s ease-in-out;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
